@@ -26,11 +26,9 @@
   .vv-zoom{ overflow:hidden; }
   .vv-zoom image-slot{ transition:transform 1.6s cubic-bezier(.19,1,.22,1); }
   .vv-zoom:hover image-slot{ transform:scale(1.05); }
-  @font-face{ font-family:'Ballet'; src:url('uploads/Ballet-Regular-VariableFont_opsz.ttf') format('truetype'); font-weight:400; font-display:swap; }
-  @font-face{ font-family:'Italianno'; src:url('uploads/Italianno-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
-  @font-face{ font-family:'Prata',Georgia,serif; src:url('uploads/Playfair_9pt-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
-  @font-face{ font-family:'Prata',Georgia,serif; src:url('uploads/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype'); font-weight:400 900; font-style:italic; font-display:swap; }
-  @font-face{ font-family:'Prata'; src:url('uploads/Prata-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Ballet'; src:url('Ballet-Regular-VariableFont_opsz.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Italianno'; src:url('Italianno-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Prata'; src:url('Prata-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
 
   a[style*="border-radius:100px"],a[style*="border-radius: 100px"],button[style*="border-radius:100px"],button[style*="border-radius: 100px"]{ transition:transform .4s cubic-bezier(.16,.7,.2,1), box-shadow .4s cubic-bezier(.16,.7,.2,1), background-color .3s ease, color .3s ease, border-color .3s ease !important; will-change:transform; }
   a[style*="border-radius:100px"]:hover,a[style*="border-radius: 100px"]:hover,button[style*="border-radius:100px"]:hover,button[style*="border-radius: 100px"]:hover{ transform:translateY(-3px) !important; box-shadow:0 14px 30px rgba(38,34,28,0.22) !important; }
@@ -109,7 +107,7 @@
 <div style="max-width:1600px;margin:0 auto;position:relative;background:#F4EFE6;">
 
   <div id="vv-preloader">
-    <img src="uploads/Panorama.png" alt="">
+    <img src="panorama.png" alt="">
     <div class="vv-pre-label">
       <div class="vv-pre-brand">VIDIK <span>Fruška gora</span></div>
       <div class="vv-pre-line"></div>
@@ -159,7 +157,7 @@
   <!-- HERO -->
   <header id="top" style="position:relative;height:88vh;min-height:620px;overflow:hidden;">
     <div style="position:absolute;inset:0;">
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hero-bg" shape="rect" fit="cover" src="uploads/Panorama.png" placeholder="Prevuci glavnu fotografiju vikendice" hint-size="100%,100%"></x-import>
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hero-bg" shape="rect" fit="cover" src="panorama.png" placeholder="Prevuci glavnu fotografiju vikendice" hint-size="100%,100%"></x-import>
     </div>
     <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,14,0.42) 0%,rgba(20,18,14,0.18) 40%,rgba(20,18,14,0.62) 100%);pointer-events:none;"></div>
     <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 6vw 7vh;pointer-events:none;">
@@ -204,7 +202,7 @@
       <p class="vv-intro-last" style="margin-top:18px;font-size:17px;line-height:1.7;color:#4C463C;max-width:460px;">Idealno za romantični beg udvoje,<br class="vv-m-br"> porodični vikend ili nekoliko<br class="vv-m-br"> produktivnih dana daleko od kancelarije.</p>
     </div>
     <div style="position:relative;min-height:480px;">
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="intro" shape="rect" fit="cover" src="uploads/Dnevna soba.png" placeholder="Dnevni boravak" hint-size="100%,100%"></x-import>
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="intro" shape="rect" fit="cover" src="dnevna-soba.png" placeholder="Dnevni boravak" hint-size="100%,100%"></x-import>
     </div>
   </section>
 
@@ -288,7 +286,7 @@
       <h2 style="font-family:'Italianno',cursive;font-weight:500;font-size:clamp(32px,3.6vw,50px);line-height:1.05;color:#26221C;">Zavirite u prostor.</h2>
     </div>
     <div class="vv-zoom" onClick="{{ openPano }}" style="position:relative;height:460px;border-radius:14px;cursor:pointer;">
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="g1b" shape="rounded" radius="14" fit="cover" src="uploads/Panorama.png" placeholder="Panorama" hint-size="100%,100%"></x-import>
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="g1b" shape="rounded" radius="14" fit="cover" src="panorama.png" placeholder="Panorama" hint-size="100%,100%"></x-import>
     </div>
     <div style="text-align:center;margin-top:40px;">
       <a href="Galerija.dc.html" style="font-family:'Prata',Georgia,serif; display:inline-block;padding:15px 34px;background:#33402F;color:#F4EFE6;border-radius:100px;font-size:14px;font-weight:600;letter-spacing:0.02em;" style-hover="background:#A96A3D;color:#F4EFE6;">Još slika</a>
@@ -386,7 +384,7 @@
   <section id="okolina" data-reveal="" class="vv-okolina" style="display:grid;grid-template-columns:minmax(0,0.72fr) minmax(0,1.28fr);align-items:stretch;">
     <div class="vv-okolina-map" style="position:relative;padding:clamp(60px,8vw,120px) 0 clamp(60px,8vw,120px) 6vw;">
       <div class="vv-zoom" onClick="{{ openMap }}" style="position:relative;height:100%;min-height:340px;border-radius:16px;overflow:hidden;cursor:pointer;">
-        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="okolina-img" shape="rect" fit="cover" src="uploads/Mapa.png" placeholder="Fruška gora / okolina" hint-size="100%,100%"></x-import>
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="okolina-img" shape="rect" fit="cover" src="mapa.png" placeholder="Fruška gora / okolina" hint-size="100%,100%"></x-import>
         <div style="position:absolute;bottom:16px;left:16px;display:inline-flex;align-items:center;gap:8px;padding:9px 16px;background:rgba(38,34,28,0.72);color:#F4EFE6;border-radius:100px;font-family:'Prata',Georgia,serif;font-size:12.5px;font-weight:600;letter-spacing:0.02em;backdrop-filter:blur(4px);pointer-events:none;">Otvori mapu</div>
       </div>
     </div>
@@ -544,7 +542,7 @@
 
   <sc-if value="{{ mapOpen }}" hint-placeholder-val="{{ false }}">
     <div onClick="{{ closeMap }}" style="position:fixed;inset:0;z-index:200;background:rgba(20,18,14,0.92);display:flex;align-items:center;justify-content:center;padding:3vw;cursor:default;animation:fadeUp .3s ease both;">
-      <img src="uploads/Mapa.png" alt="Mapa okoline vikendice Vidik" onClick="{{ stopProp }}" style="max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,0.6);cursor:default;">
+      <img src="mapa.png" alt="Mapa okoline vikendice Vidik" onClick="{{ stopProp }}" style="max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,0.6);cursor:default;">
       <div onClick="{{ closeMap }}" title="Zatvori" style="position:absolute;top:3vh;right:3vw;display:inline-flex;align-items:center;gap:10px;color:rgba(244,239,230,0.7);cursor:pointer;letter-spacing:0.22em;text-transform:uppercase;font-size:11px;font-weight:600;font-family:'Prata',Georgia,serif;" style-hover="color:#FBF7EF;">Zatvori<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></div>
     </div>
   </sc-if>
