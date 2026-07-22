@@ -18,10 +18,8 @@
   a{ color:#33402F; text-decoration:none; }
   a:hover{ color:#A96A3D; }
   ::selection{ background:#A96A3D; color:#F4EFE6; }
-  @font-face{ font-family:'Italianno'; src:url('uploads/Italianno-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
-  @font-face{ font-family:'Prata',Georgia,serif; src:url('uploads/Playfair_9pt-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
-  @font-face{ font-family:'Prata',Georgia,serif; src:url('uploads/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype'); font-weight:400 900; font-style:italic; font-display:swap; }
-  @font-face{ font-family:'Prata'; src:url('uploads/Prata-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Italianno'; src:url('Italianno-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Prata'; src:url('Prata-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
 
   a[style*="border-radius:100px"],a[style*="border-radius: 100px"],button[style*="border-radius:100px"],button[style*="border-radius: 100px"]{ transition:transform .4s cubic-bezier(.16,.7,.2,1), box-shadow .4s cubic-bezier(.16,.7,.2,1), background-color .3s ease, color .3s ease, border-color .3s ease !important; will-change:transform; }
   a[style*="border-radius:100px"]:hover,a[style*="border-radius: 100px"]:hover,button[style*="border-radius:100px"]:hover,button[style*="border-radius: 100px"]:hover{ transform:translateY(-3px) !important; box-shadow:0 14px 30px rgba(38,34,28,0.22) !important; }
@@ -83,7 +81,7 @@
       <!-- Meni 1 -->
       <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:relative;height:220px;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu1" shape="rect" fit="cover" src="uploads/jelo-menu1.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu1" shape="rect" fit="cover" src="jelo-menu1.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
         </div>
         <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
           <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Tradicionalni</div>
@@ -102,7 +100,7 @@
       <!-- Meni 2 -->
       <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:relative;height:220px;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu2" shape="rect" fit="cover" src="uploads/jelo-menu2.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu2" shape="rect" fit="cover" src="jelo-menu2.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
         </div>
         <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
           <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Vinski</div>
@@ -121,7 +119,7 @@
       <!-- Meni 6 -->
       <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:relative;height:220px;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu6" shape="rect" fit="cover" src="uploads/jelo-menu6.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu6" shape="rect" fit="cover" src="jelo-menu6.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
         </div>
         <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
           <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Nedeljni ručak</div>
@@ -140,7 +138,7 @@
       <!-- Meni 7 -->
       <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:relative;height:220px;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu7" shape="rect" fit="cover" src="uploads/jelo-menu7.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu7" shape="rect" fit="cover" src="jelo-menu7.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
         </div>
         <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
           <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Gurmanski</div>
@@ -159,7 +157,7 @@
       <!-- Meni 9 -->
       <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:relative;height:220px;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu9" shape="rect" fit="cover" src="uploads/jelo-menu9.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu9" shape="rect" fit="cover" src="jelo-menu9.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
         </div>
         <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
           <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Lagani ručak</div>
@@ -178,7 +176,7 @@
       <!-- Meni 3 -->
       <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:relative;height:220px;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu3" shape="rect" fit="cover" src="uploads/jelo-menu3.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu3" shape="rect" fit="cover" src="jelo-menu3.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
         </div>
         <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
           <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Posni / vegetarijanski</div>
@@ -197,7 +195,7 @@
       <!-- Meni 4 -->
       <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:relative;height:220px;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu4" shape="rect" fit="cover" src="uploads/jelo-menu4.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu4" shape="rect" fit="cover" src="jelo-menu4.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
         </div>
         <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
           <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;"><span style="letter-spacing: 1.76px;">Posni / vegetarijanski</span></div>
@@ -216,7 +214,7 @@
       <!-- Meni 5 -->
       <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:relative;height:220px;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu5" shape="rect" fit="cover" src="uploads/jelo-menu5.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu5" shape="rect" fit="cover" src="jelo-menu5.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
         </div>
         <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
           <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Posni / vegetarijanski</div>
@@ -235,7 +233,7 @@
       <!-- Meni 8 -->
       <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
         <div style="position:relative;height:220px;">
-          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu8" shape="rect" fit="cover" src="uploads/jelo-menu8.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu8" shape="rect" fit="cover" src="jelo-menu8.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
         </div>
         <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
           <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Posni / vegetarijanski</div>
