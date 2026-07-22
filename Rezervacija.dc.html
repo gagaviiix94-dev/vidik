@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:'Prata',Georgia,serif; color:#F4EFE6; background:#33402F; -webkit-font-smoothing:antialiased; }
+  a{ color:#C7B78F; text-decoration:none; }
+  a:hover{ color:#F4EFE6; }
+  input,textarea,select,button{ font-family:inherit; }
+  ::selection{ background:#A96A3D; color:#F4EFE6; }
+  @font-face{ font-family:'Italianno'; src:url('uploads/Italianno-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Prata'; src:url('uploads/Prata-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+
+  a[style*="border-radius:100px"],a[style*="border-radius: 100px"],button[style*="border-radius:100px"],button[style*="border-radius: 100px"]{ transition:transform .4s cubic-bezier(.16,.7,.2,1), box-shadow .4s cubic-bezier(.16,.7,.2,1), background-color .3s ease, color .3s ease, border-color .3s ease !important; will-change:transform; }
+  a[style*="border-radius:100px"]:hover,a[style*="border-radius: 100px"]:hover,button[style*="border-radius:100px"]:hover,button[style*="border-radius: 100px"]:hover{ transform:translateY(-3px) !important; box-shadow:0 14px 30px rgba(38,34,28,0.22) !important; }
+  a[style*="border-radius:100px"]:active,a[style*="border-radius: 100px"]:active,button[style*="border-radius:100px"]:active,button[style*="border-radius: 100px"]:active{ transform:translateY(-1px) !important; }
+  /* btn-anim */
+  @media (max-width:820px){
+    .vv-desk-br{ display:none !important; }
+    [style*="grid-template-columns"]{ grid-template-columns:minmax(0,1fr) !important; }
+    [style*="grid-template-columns"] > *{ min-width:0 !important; max-width:100% !important; }
+    form{ max-width:100% !important; }
+    input,select,textarea{ width:100% !important; min-width:0 !important; max-width:100% !important; box-sizing:border-box !important; }
+  }
+  /* mob-type */
+  @media (max-width:880px){
+    html,body{ overflow-x:clip !important; max-width:100% !important; }
+    body > div, #dc-root > div{ overflow-x:clip !important; }
+  }
+  @media (max-width:560px){
+    body{ overflow-wrap:break-word; }
+    h1{ font-size:clamp(38px,11.5vw,64px) !important; line-height:1.08 !important; }
+    h2{ font-size:clamp(27px,8vw,44px) !important; line-height:1.12 !important; }
+    h3{ font-size:clamp(24px,7vw,34px) !important; }
+  }
+  @media (max-width:600px){ #dc-root nav{ padding-right:6vw !important; } #dc-root nav > a:last-child{ display:inline-block !important; white-space:normal !important; max-width:110px; text-align:right; line-height:1.28; } }
+</style>
+
+</helmet>
+
+<div style="max-width:1600px;margin:0 auto;position:relative;background:#33402F;min-height:100vh;">
+
+  <!-- NAV -->
+  <nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;background:rgba(38,44,33,0.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(244,239,230,0.12);">
+    <a href="Vikendica Vidik.dc.html" style="font-family:'Prata',Georgia,serif;font-size:26px;font-weight:600;letter-spacing:0.04em;color:#FBF7EF;display:flex;align-items:baseline;gap:9px;">
+      VIDIK
+      <span style="font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#C7B78F;">Fruška gora</span>
+    </a>
+    <a href="Vikendica Vidik.dc.html" data-back="" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#C7B78F;" style-hover="color:#FBF7EF;">← Nazad na početnu</a>
+  </nav>
+
+  <!-- REZERVACIJA -->
+  <section id="rezervacija-boravak" style="padding:clamp(56px,7vw,110px) 6vw clamp(40px,5vw,70px);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:70px;max-width:1180px;margin:0 auto;align-items:start;">
+      <div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#C7B78F;margin-bottom:20px;">Rezervacija</div>
+        <h2 style="font-family:'Italianno',cursive;font-weight:500;font-size:clamp(38px,4.4vw,66px);line-height:1.05;color:#FBF7EF;text-wrap:balance;">Pošaljite upit<br>i vidimo se na Fruškoj gori.</h2>
+        <p style="margin-top:24px;font-size:17px;line-height:1.7;color:rgba(244,239,230,0.82);max-width:420px;">Odaberite datum i broj gostiju, a mi ćemo Vam se javiti se u najkraćem roku sa potvrdom.</p>
+        <div style="margin-top:40px;display:flex;flex-direction:column;gap:18px;">
+          <div style="display:flex;align-items:center;gap:14px;"><span style="width:9px;height:9px;background:#C7B78F;transform:rotate(45deg);"></span><span style="font-size:15px;color:#EDE6D8;">+381 60 000 0000</span></div>
+          <div style="display:flex;align-items:center;gap:14px;"><span style="width:9px;height:9px;background:#C7B78F;transform:rotate(45deg);"></span><span style="font-size:15px;color:#EDE6D8;">rezervacije@vidik-fruskagora.rs</span></div>
+          <div style="display:flex;align-items:center;gap:14px;"><span style="width:9px;height:9px;background:#C7B78F;transform:rotate(45deg);"></span><span style="font-size:15px;color:#EDE6D8;">Fruška gora, Srbija</span></div>
+        </div>
+      </div>
+
+      <sc-if value="{{ sent }}">
+        <div style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:20px;padding:56px 40px;text-align:center;">
+          <div style="width:16px;height:16px;background:#C7B78F;transform:rotate(45deg);margin:0 auto 24px;"></div>
+          <h3 style="font-family:'Italianno',cursive;font-size:32px;color:#FBF7EF;">Hvala na upitu!</h3>
+          <p style="margin-top:14px;font-size:16px;line-height:1.6;color:rgba(244,239,230,0.82);">Primili smo vaše podatke i javljamo se uskoro sa potvrdom dostupnosti.</p>
+        </div>
+      </sc-if>
+      <sc-if value="{{ notSent }}">
+        <form onSubmit="{{ onSubmit }}" style="background:rgba(244,239,230,0.05);border:1px solid rgba(244,239,230,0.14);border-radius:20px;padding:38px 34px;display:flex;flex-direction:column;gap:18px;">
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Ime i prezime</label>
+            <input type="text" required="" placeholder="Vaše ime" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;" style-focus="border-color:#C7B78F;">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Email</label>
+              <input type="email" required="" placeholder="email@primer.rs" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;" style-focus="border-color:#C7B78F;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Telefon</label>
+              <input type="tel" placeholder="+381…" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;" style-focus="border-color:#C7B78F;">
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 0.8fr;gap:16px;">
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Dolazak</label>
+              <input type="date" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;color-scheme:dark;" style-focus="border-color:#C7B78F;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Odlazak</label>
+              <input type="date" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;color-scheme:dark;" style-focus="border-color:#C7B78F;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Gosti</label>
+              <input type="number" min="1" max="6" placeholder="2" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;" style-focus="border-color:#C7B78F;">
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Poruka</label>
+            <textarea rows="3" placeholder="Povod dolaska, posebne želje, proslava…" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;resize:vertical;" style-focus="border-color:#C7B78F;"></textarea>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#C7B78F;">Provera - koliko je {{ captchaA }} + {{ captchaB }}?</label>
+            <input type="text" inputmode="numeric" value="{{ captchaVal }}" onInput="{{ onCaptcha }}" placeholder="Upišite rezultat" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;" style-focus="border-color:#C7B78F;">
+            <sc-if value="{{ captchaError }}"><span style="font-size:12.5px;color:#E0A46A;">Netačan odgovor, pokušajte ponovo.</span></sc-if>
+          </div>
+          <button type="submit" style="font-family:'Prata',Georgia,serif;margin-top:6px;padding:15px;background:#A96A3D;color:#FBF7EF;border:none;border-radius:100px;font-size:15px;font-weight:600;letter-spacing:0.02em;cursor:pointer;" style-hover="background:#C7B78F;color:#26221C;">Pošalji upit</button>
+        </form>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- KONSULTACIJE -->
+  <section id="konsultacije" style="padding:clamp(40px,5vw,70px) 6vw clamp(64px,8vw,120px);border-top:1px solid rgba(244,239,230,0.12);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:70px;max-width:1180px;margin:0 auto;align-items:start;">
+      <div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#C7B78F;margin-bottom:20px;">Konsultacije za događaj</div>
+        <h2 style="font-family:'Italianno',cursive;font-weight:500;font-size:clamp(38px,4.4vw,66px);line-height:1.05;color:#FBF7EF;text-wrap:balance;">Planirate proslavu<br class="vv-desk-br">ili poseban događaj?</h2>
+        <p style="margin-top:24px;font-size:17px;line-height:1.7;color:rgba(244,239,230,0.82);max-width:420px;">Zakažite konsultacije - zajedno biramo termin, meni, ketering i dekoraciju u skladu sa povodom i brojem gostiju.</p>
+        <div style="margin-top:40px;display:flex;flex-direction:column;gap:18px;">
+          <div style="display:flex;align-items:center;gap:14px;"><span style="width:9px;height:9px;background:#C7B78F;transform:rotate(45deg);"></span><span style="font-size:15px;color:#EDE6D8;">Rođendani i godišnjice</span></div>
+          <div style="display:flex;align-items:center;gap:14px;"><span style="width:9px;height:9px;background:#C7B78F;transform:rotate(45deg);"></span><span style="font-size:15px;color:#EDE6D8;">Porodična i poslovna okupljanja</span></div>
+          <div style="display:flex;align-items:center;gap:14px;"><span style="width:9px;height:9px;background:#C7B78F;transform:rotate(45deg);"></span><span style="font-size:15px;color:#EDE6D8;">Manje svečanosti uz ketering</span></div>
+        </div>
+      </div>
+
+      <sc-if value="{{ sent2 }}">
+        <div style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:20px;padding:56px 40px;text-align:center;">
+          <div style="width:16px;height:16px;background:#C7B78F;transform:rotate(45deg);margin:0 auto 24px;"></div>
+          <h3 style="font-family:'Italianno',cursive;font-size:32px;color:#FBF7EF;">Hvala na upitu!</h3>
+          <p style="margin-top:14px;font-size:16px;line-height:1.6;color:rgba(244,239,230,0.82);">Javljamo se uskoro kako bismo dogovorili detalje vašeg događaja.</p>
+        </div>
+      </sc-if>
+      <sc-if value="{{ notSent2 }}">
+        <form onSubmit="{{ onSubmit2 }}" style="background:rgba(244,239,230,0.05);border:1px solid rgba(244,239,230,0.14);border-radius:20px;padding:38px 34px;display:flex;flex-direction:column;gap:18px;">
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Ime i prezime</label>
+            <input type="text" required="" placeholder="Vaše ime" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;" style-focus="border-color:#C7B78F;">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Email</label>
+              <input type="email" required="" placeholder="email@primer.rs" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;" style-focus="border-color:#C7B78F;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Telefon</label>
+              <input type="tel" placeholder="+381…" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;" style-focus="border-color:#C7B78F;">
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 0.8fr;gap:16px;">
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Vrsta događaja</label>
+              <div style="position:relative;">
+              <select style="width: 100%; -webkit-appearance: none; appearance: none; background-color: #F4EFE60E; border: 1px solid rgba(244,239,230,0.18); border-radius: 10px; padding: 13px 40px 13px 15px; font-size: 15px; font-family: inherit; line-height: 1.4; color: #FBF7EF; outline: none; cursor: pointer; color-scheme: dark" style-focus="border-color:#C7B78F;">
+                <option style="background:#2B2620;color:#FBF7EF;">Rođendan</option>
+                <option style="background:#2B2620;color:#FBF7EF;">Godišnjica</option>
+                <option style="background:#2B2620;color:#FBF7EF;">Porodično okupljanje</option>
+                <option style="background:#2B2620;color:#FBF7EF;">Poslovni događaj</option>
+                <option style="background:#2B2620;color:#FBF7EF;">Drugo</option>
+              </select>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C7B78F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;right:15px;top:50%;transform:translateY(-50%);pointer-events:none;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:7px;">
+              <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Broj gostiju</label>
+              <input type="number" min="1" placeholder="20" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;" style-focus="border-color:#C7B78F;">
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Željeni datum</label>
+            <input type="date" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;color-scheme:dark;" style-focus="border-color:#C7B78F;">
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#C7B78F;">Opis događaja i želje</label>
+            <textarea rows="3" placeholder="Povod, ketering, dekoracija, posebne želje…" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;resize:vertical;" style-focus="border-color:#C7B78F;"></textarea>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px;">
+            <label style="font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#C7B78F;">Provera - koliko je {{ captcha2A }} + {{ captcha2B }}?</label>
+            <input type="text" inputmode="numeric" value="{{ captcha2Val }}" onInput="{{ onCaptcha2 }}" placeholder="Upišite rezultat" style="background:rgba(244,239,230,0.06);border:1px solid rgba(244,239,230,0.18);border-radius:10px;padding:13px 15px;font-size:15px;color:#FBF7EF;outline:none;" style-focus="border-color:#C7B78F;">
+            <sc-if value="{{ captcha2Error }}"><span style="font-size:12.5px;color:#E0A46A;">Netačan odgovor, pokušajte ponovo.</span></sc-if>
+          </div>
+          <button type="submit" style="font-family:'Prata',Georgia,serif;margin-top:6px;padding:15px;background:#A96A3D;color:#FBF7EF;border:none;border-radius:100px;font-size:15px;font-weight:600;letter-spacing:0.02em;cursor:pointer;" style-hover="background:#C7B78F;color:#26221C;">Zakaži konsultacije</button>
+        </form>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding:56px 6vw 40px;background:#26221C;color:#F4EFE6;">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:30px;max-width:1400px;margin:0 auto;">
+      <div>
+        <div style="font-family:'Prata',Georgia,serif;font-size:30px;font-weight:600;letter-spacing:0.04em;">VIDIK</div>
+        <p style="margin-top:10px;font-size:13px;color:rgba(244,239,230,0.6);max-width:280px;line-height:1.5;">Boutique vikendica za luksuzan odmor na Fruškoj gori.</p>
+      </div>
+      <div style="display:flex;gap:40px;font-size:13.5px;">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="Vikendica Vidik.dc.html#sadrzaji" style="color:rgba(244,239,230,0.8);">Sadržaji</a>
+          <a href="Vikendica Vidik.dc.html#galerija" style="color:rgba(244,239,230,0.8);">Galerija</a>
+          <a href="Vikendica Vidik.dc.html#cenovnik" style="color:rgba(244,239,230,0.8);">Cenovnik</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="Vikendica Vidik.dc.html#okolina" style="color:rgba(244,239,230,0.8);">Okolina</a>
+          <a href="Vikendica Vidik.dc.html#faq" style="color:rgba(244,239,230,0.8);">Pitanja</a>
+          <a href="Rezervacija.dc.html" style="color:rgba(244,239,230,0.8);">Rezervacija</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:40px;padding-top:22px;border-top:1px solid rgba(244,239,230,0.14);max-width:1400px;margin-left:auto;margin-right:auto;font-size:12px;color:rgba(244,239,230,0.45);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;">
+      <span>© 2026 VIDIK · Fruška gora</span>
+      <span>rezervacije@vidik-fruskagora.rs · +381 60 000 0000</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    sent: false, captchaA: 1 + Math.floor(Math.random() * 8), captchaB: 1 + Math.floor(Math.random() * 8), captchaVal: '', captchaError: false,
+    sent2: false, captcha2A: 1 + Math.floor(Math.random() * 8), captcha2B: 1 + Math.floor(Math.random() * 8), captcha2Val: '', captcha2Error: false,
+  };
+  componentDidMount() {
+    try { const _f = sessionStorage.getItem('vv-from'); if (_f) { const _b = document.querySelector('#dc-root a[data-back]'); if (_b) _b.setAttribute('href', 'Vikendica Vidik.dc.html#' + _f); } } catch (e) {}
+    const hash = window.location.hash;
+    if (!hash || hash.length < 2) return;
+    const id = decodeURIComponent(hash.slice(1));
+    let tries = 0;
+    const tick = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        const y = el.getBoundingClientRect().top + window.pageYOffset - 70;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      } else if (tries++ < 40) {
+        setTimeout(tick, 100);
+      }
+    };
+    setTimeout(tick, 150);
+  }
+  renderVals() {
+    return {
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      captchaA: this.state.captchaA,
+      captchaB: this.state.captchaB,
+      captchaVal: this.state.captchaVal,
+      captchaError: this.state.captchaError,
+      onCaptcha: (e) => this.setState({ captchaVal: e.target.value, captchaError: false }),
+      onSubmit: (e) => {
+        e.preventDefault();
+        if (parseInt(this.state.captchaVal, 10) === this.state.captchaA + this.state.captchaB) {
+          this.setState({ sent: true });
+        } else {
+          this.setState({ captchaError: true, captchaVal: '' });
+        }
+      },
+      sent2: this.state.sent2,
+      notSent2: !this.state.sent2,
+      captcha2A: this.state.captcha2A,
+      captcha2B: this.state.captcha2B,
+      captcha2Val: this.state.captcha2Val,
+      captcha2Error: this.state.captcha2Error,
+      onCaptcha2: (e) => this.setState({ captcha2Val: e.target.value, captcha2Error: false }),
+      onSubmit2: (e) => {
+        e.preventDefault();
+        if (parseInt(this.state.captcha2Val, 10) === this.state.captcha2A + this.state.captcha2B) {
+          this.setState({ sent2: true });
+        } else {
+          this.setState({ captcha2Error: true, captcha2Val: '' });
+        }
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

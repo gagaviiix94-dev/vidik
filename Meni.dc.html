@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:'Prata',Georgia,serif; color:#26221C; background:#F4EFE6; -webkit-font-smoothing:antialiased; }
+  a{ color:#33402F; text-decoration:none; }
+  a:hover{ color:#A96A3D; }
+  ::selection{ background:#A96A3D; color:#F4EFE6; }
+  @font-face{ font-family:'Italianno'; src:url('uploads/Italianno-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Prata',Georgia,serif; src:url('uploads/Playfair_9pt-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Prata',Georgia,serif; src:url('uploads/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype'); font-weight:400 900; font-style:italic; font-display:swap; }
+  @font-face{ font-family:'Prata'; src:url('uploads/Prata-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+
+  a[style*="border-radius:100px"],a[style*="border-radius: 100px"],button[style*="border-radius:100px"],button[style*="border-radius: 100px"]{ transition:transform .4s cubic-bezier(.16,.7,.2,1), box-shadow .4s cubic-bezier(.16,.7,.2,1), background-color .3s ease, color .3s ease, border-color .3s ease !important; will-change:transform; }
+  a[style*="border-radius:100px"]:hover,a[style*="border-radius: 100px"]:hover,button[style*="border-radius:100px"]:hover,button[style*="border-radius: 100px"]:hover{ transform:translateY(-3px) !important; box-shadow:0 14px 30px rgba(38,34,28,0.22) !important; }
+  a[style*="border-radius:100px"]:active,a[style*="border-radius: 100px"]:active,button[style*="border-radius:100px"]:active,button[style*="border-radius: 100px"]:active{ transform:translateY(-1px) !important; }
+  /* btn-anim */
+  .vv-mob-br{ display:none; }
+  @media (max-width:600px){ .vv-mob-br{ display:inline !important; } .vv-meni-lead{ font-size:13.5px !important; } .vv-meni-note{ font-size:11.5px !important; } .vv-meni-ket-lead{ font-size:12.5px !important; } }
+  @media (max-width:920px){ [style*="repeat(3"]{ grid-template-columns:1fr 1fr !important; } }
+  @media (max-width:600px){ [style*="repeat(3"]{ grid-template-columns:1fr !important; } }
+  /* mob-type */
+  @media (max-width:880px){
+    html,body{ overflow-x:clip !important; max-width:100% !important; }
+    body > div, #dc-root > div{ overflow-x:clip !important; }
+  }
+  @media (max-width:560px){
+    body{ overflow-wrap:break-word; }
+    h1{ font-size:clamp(38px,11.5vw,64px) !important; line-height:1.08 !important; }
+    h2{ font-size:clamp(27px,8vw,44px) !important; line-height:1.12 !important; }
+    h3{ font-size:clamp(24px,7vw,34px) !important; }
+  }
+  @media (max-width:600px){ #dc-root nav{ padding-right:6vw !important; } #dc-root nav > a:last-child{ display:inline-block !important; white-space:normal !important; max-width:110px; text-align:right; line-height:1.28; } }
+  .vv-mslide-nav{ display:none; }
+  .vv-mslide-vp{ overflow:visible; }
+  @media (max-width:880px){
+    .vv-mslide-vp{ overflow:hidden; }
+    .vv-mslide-track{ display:flex !important; grid-template-columns:none !important; gap:0 !important; transition:transform .55s cubic-bezier(.16,.7,.2,1); will-change:transform; }
+    .vv-mslide-track > div{ flex:0 0 100% !important; }
+    .vv-mslide-nav{ display:flex !important; }
+  }
+  @media (min-width:881px){ .vv-mslide-track{ transform:none !important; } }
+</style>
+
+</helmet>
+
+<div style="max-width:1600px;margin:0 auto;position:relative;background:#F4EFE6;min-height:100vh;">
+
+  <!-- NAV -->
+  <nav style="font-family:'Prata',Georgia,serif; position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;background:rgba(244,239,230,0.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(38,34,28,0.10);">
+    <a href="Vikendica Vidik.dc.html" style="font-family:'Prata',Georgia,serif;font-size:26px;font-weight:600;letter-spacing:0.04em;color:#26221C;display:flex;align-items:baseline;gap:9px;">
+      VIDIK
+      <span style="font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#A96A3D;">Fruška gora</span>
+    </a>
+    <a href="Vikendica Vidik.dc.html" data-back="" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#33402F;" style-hover="color:#A96A3D;">← Nazad na početnu</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header style="padding:clamp(60px,8vw,110px) 6vw clamp(30px,4vw,48px);text-align:center;">
+    <div style="font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#A96A3D;margin-bottom:20px;">Restoran Salaš Vidik</div>
+    <h1 style="font-family:'Italianno',cursive;font-weight:400;font-size:clamp(52px,7vw,96px);line-height:1.05;color:#26221C;max-width:900px;margin:0 auto;">Specijalni meniji</h1>
+    <p class="vv-meni-lead" style="margin-top:24px;font-size:17px;line-height:1.7;color:#4C463C;max-width:600px;margin-left:auto;margin-right:auto;font-family:system-ui,sans-serif;">Svakog dana pripremamo svežu hranu iz menija po Vašem izboru<br></p>
+  </header>
+
+  <!-- MENUS -->
+  <section style="padding:clamp(30px,4vw,50px) 6vw clamp(70px,9vw,120px);">
+    <div class="vv-mslide-wrap" style="position:relative;max-width:1300px;margin:0 auto;">
+    <div class="vv-mslide-vp">
+    <div class="vv-mslide-track vv-menu-track" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch;">
+
+      <!-- Meni 1 -->
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:relative;height:220px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu1" shape="rect" fit="cover" src="uploads/jelo-menu1.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Tradicionalni</div>
+          <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; margin-top: 10px; letter-spacing: 0.08em; font-weight: 500">Salaš trpeza</h3>
+          <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Domaći specijaliteti sa roštilja i iz furune</p>
+          <div style="height:1px;background:rgba(38,34,28,0.10);margin:22px 0;"></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;font-family:'Prata',Georgia,serif;flex-grow:1;">
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Domaća gibanica i kajmak</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">predjelo uz domaći ajvar</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Teleća čorba</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">sa domaćim rezancima</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Mešano meso sa roštilja</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">ćevapi, vešalica, kobasica, urnebes</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Štrudla sa makom</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">domaći desert</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Meni 2 -->
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:relative;height:220px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu2" shape="rect" fit="cover" src="uploads/jelo-menu2.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Vinski</div>
+          <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; margin-top: 10px; letter-spacing: 0.08em; font-weight: 500">Fruškogorska degustacija</h3>
+          <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Uparivanje jela sa vinima iz lokalnih vinarija</p>
+          <div style="height:1px;background:rgba(38,34,28,0.10);margin:22px 0;"></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;font-family:'Prata',Georgia,serif;flex-grow:1;">
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Daska suhomesnatih specijaliteta</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">uz bermet aperitiv</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Rižoto sa vrganjima</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">uz čašu rizlinga</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Divljač u vinskom sosu</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">uz frankovku</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Kolač od oraha</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">uz desertno vino</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Meni 6 -->
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:relative;height:220px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu6" shape="rect" fit="cover" src="uploads/jelo-menu6.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Nedeljni ručak</div>
+          <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; margin-top: 10px; letter-spacing: 0.08em; font-weight: 500">Bakina trpeza</h3>
+          <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Klasičan nedeljni ručak kao nekada kod kuće</p>
+          <div style="height:1px;background:rgba(38,34,28,0.10);margin:22px 0;"></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;font-family:'Prata',Georgia,serif;flex-grow:1;">
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Ruska salata</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">po domaćoj recepturi</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Supa sa knedlama</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">od domaće živine</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Pečenje sa mladim krompirom</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">iz furune</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Krempita</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">domaći desert</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Meni 7 -->
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:relative;height:220px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu7" shape="rect" fit="cover" src="uploads/jelo-menu7.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Gurmanski</div>
+          <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; margin-top: 10px; letter-spacing: 0.08em; font-weight: 500">Domaćinski praznik</h3>
+          <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Obilna trpeza za posebne dane i veće apetite</p>
+          <div style="height:1px;background:rgba(38,34,28,0.10);margin:22px 0;"></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;font-family:'Prata',Georgia,serif;flex-grow:1;">
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Domaći kajmak i ajvar</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">hladno predjelo</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Punjena teleća džigerica</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">uz sezonsku salatu</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Jagnjeće pečenje</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">ispod sača, sa krompirom</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Baklava</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">domaći desert uz kafu</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Meni 9 -->
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:relative;height:220px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu9" shape="rect" fit="cover" src="uploads/jelo-menu9.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Lagani ručak</div>
+          <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; margin-top: 10px; letter-spacing: 0.08em; font-weight: 500">Podnevni predah</h3>
+          <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Lagan ručak za produktivan radni dan u vikendici</p>
+          <div style="height:1px;background:rgba(38,34,28,0.10);margin:22px 0;"></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;font-family:'Prata',Georgia,serif;flex-grow:1;">
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Sezonska salata sa dresingom</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">uz pečene semenke</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Krem supa od povrća</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">uz domaće krutone</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Pileći file sa grilovanim povrćem</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">uz mladi krompir</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Voćni tanjir</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">sezonsko voće iz okoline</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Meni 3 -->
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:relative;height:220px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu3" shape="rect" fit="cover" src="uploads/jelo-menu3.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Posni / vegetarijanski</div>
+          <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; margin-top: 10px; letter-spacing: 0.08em; font-weight: 500">Bašta sa Fruške gore</h3>
+          <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Laka jela od sezonskog povrća i žitarica</p>
+          <div style="height:1px;background:rgba(38,34,28,0.10);margin:22px 0;"></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;font-family:'Prata',Georgia,serif;flex-grow:1;">
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Salata od pečene paprike</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">sa belim lukom i maslinovim uljem</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Krem supa od bundeve</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">sa semenkama</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Sarma od blitve</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">punjena heljdom i povrćem</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Voćni tanjir</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">sezonsko voće iz okoline</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Meni 4 -->
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:relative;height:220px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu4" shape="rect" fit="cover" src="uploads/jelo-menu4.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;"><span style="letter-spacing: 1.76px;">Posni / vegetarijanski</span></div>
+          <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; margin-top: 10px; letter-spacing: 0.08em; font-weight: 500">Dunavska trpeza</h3>
+          <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Rečni specijaliteti spremljeni na tradicionalni način</p>
+          <div style="height:1px;background:rgba(38,34,28,0.10);margin:22px 0;"></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;font-family:'Prata',Georgia,serif;flex-grow:1;">
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Dimljeni šaran</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">predjelo uz domaći hleb</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Riblja čorba</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">od tri vrste rečne ribe</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Smuđ na žaru</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">uz blitvu i mladi krompir</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Palačinke sa orasima</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">domaći desert</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Meni 5 -->
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:relative;height:220px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu5" shape="rect" fit="cover" src="uploads/jelo-menu5.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Posni / vegetarijanski</div>
+          <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; margin-top: 10px; letter-spacing: 0.08em; font-weight: 500">Zeleni salaš</h3>
+          <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Mahunarke i žitarice u sitim, posnim kombinacijama</p>
+          <div style="height:1px;background:rgba(38,34,28,0.10);margin:22px 0;"></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;font-family:'Prata',Georgia,serif;flex-grow:1;">
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Namaz od pečenog patlidžana</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">uz domaći hleb</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Pasulj prebranac</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">iz furune</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Punjene tikvice</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">sa integralnim pirinčem</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Kolač od šargarepe</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">bez jaja i mleka</div></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Meni 8 -->
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+        <div style="position:relative;height:220px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="menu8" shape="rect" fit="cover" src="uploads/jelo-menu8.png" placeholder="Fotografija jela" hint-size="100%,100%"></x-import>
+        </div>
+        <div style="padding:32px 30px;display:flex;flex-direction:column;flex-grow:1;">
+          <div style="font-size:11px;font-weight:600;letter-spacing:0.16em;color:#A96A3D;font-family:'Prata',Georgia,serif;">Posni / vegetarijanski</div>
+          <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; margin-top: 10px; letter-spacing: 0.08em; font-weight: 500">Vrt i žitnica</h3>
+          <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Topla posna jela od žitarica i sezonskog povrća</p>
+          <div style="height:1px;background:rgba(38,34,28,0.10);margin:22px 0;"></div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:16px;font-family:'Prata',Georgia,serif;flex-grow:1;">
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Humus od leblebija</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">uz pečene pite</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Čorba od sočiva</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">sa svežim začinskim biljem</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Đuveč od povrća</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">sa integralnim pirinčem</div></li>
+            <li><div style="font-size:15px;font-weight:600;color:#26221C;">Štrudla sa jabukama</div><div style="font-size:13px;color:#6B6459;margin-top:2px;">posni desert</div></li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+    </div>
+      <button class="vv-mslide-nav vv-menu-prev" onClick="{{ menuPrev }}" aria-label="Prethodni meni" style="position:absolute;top:50%;left:-6px;transform:translateY(-50%);width:40px;height:60px;background:none;border:none;padding:0;color:#26221C;font-size:34px;line-height:1;cursor:pointer;align-items:center;justify-content:center;z-index:5;transition:none;">‹</button>
+      <button class="vv-mslide-nav vv-menu-next" onClick="{{ menuNext }}" aria-label="Sledeci meni" style="position:absolute;top:50%;right:-6px;transform:translateY(-50%);width:40px;height:60px;background:none;border:none;padding:0;color:#26221C;font-size:34px;line-height:1;cursor:pointer;align-items:center;justify-content:center;z-index:5;transition:none;">›</button>
+    </div>
+    <p class="vv-meni-note" style="text-align:center;margin-top:44px;font-size:14px;line-height:1.6;color:#6B6459;max-width:640px;margin-left:auto;margin-right:auto;font-family:'Prata',Georgia,serif;">Ponuda se menja prema sezoni i dostupnim namirnicama.&nbsp;<br class="vv-mob-br">Za više informacija posetite naš sajt.<br>Posebne želje, alergije i dijetetske potrebe&nbsp;<br class="vv-mob-br">uskladite sa domaćinima prilikom rezervacije.</p>
+    <div style="text-align:center;margin-top:48px;">
+      <a href="Rezervacija.dc.html#rezervacija-boravak" style="font-family:'Prata',Georgia,serif; display:inline-block;padding:16px 36px;background:#A96A3D;color:#FBF7EF;border-radius:100px;font-size:15px;font-weight:600;letter-spacing:0.02em;" style-hover="background:#33402F;color:#F4EFE6;">Rezervišite svoj boravak</a>
+    </div>
+
+  </section>
+
+  <!-- KETERING -->
+  <section id="ketering" style="padding:clamp(64px,8vw,110px) 6vw;background:#EDE6D8;">
+    <div style="text-align:center;max-width:640px;margin:0 auto 56px;">
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#A96A3D;margin-bottom:18px;font-family:'Prata',Georgia,serif;">Ketering za proslave</div>
+      <h2 style="font-family:'Italianno',cursive;font-weight:400;font-size:clamp(42px,5.5vw,74px);line-height:1.05;color:#26221C;">Za vaše posebne prilike</h2>
+      <p class="vv-meni-ket-lead" style="margin-top:20px;font-size:16px;line-height:1.7;color:#4C463C;font-family:'Prata',Georgia,serif;">Organizujete rođendan, godišnjicu ili manju proslavu<br class="vv-mob-br">u vikendici? Salaš Vidik priprema ketering po meri -&nbsp;<br class="vv-mob-br">biramo zajedno u skladu sa povodom i brojem gostiju.</p>
+    </div>
+    <div class="vv-mslide-wrap" style="position:relative;max-width:1300px;margin:0 auto;">
+    <div class="vv-mslide-vp">
+    <div class="vv-mslide-track vv-ket-track" style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:stretch;">
+
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;padding:34px 30px;display:flex;flex-direction:column;">
+        <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; letter-spacing: 0.08em; font-weight: 500">Koktel zalogaji</h3>
+        <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Za opuštena druženja uz piće, do 15 gostiju</p>
+        <div style="height:1px;background:rgba(38,34,28,0.10);margin:20px 0;"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:14.5px;color:#3A342B;font-family:'Prata',Georgia,serif;flex-grow:1;">
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Slani i sirni zalogaji</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Mini pite i tartlete</li>
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Voćni tanjir</li>
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Slatki tanjir</li>
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Piće iz Premium seleckije po izboru našeg somelijea</li>
+        </ul>
+      </div>
+
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;padding:34px 30px;display:flex;flex-direction:column;">
+        <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; letter-spacing: 0.08em; font-weight: 500">Svečana večera</h3>
+        <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Meni sa posluživanjem za rođendane i godišnjice</p>
+        <div style="height:1px;background:rgba(38,34,28,0.10);margin:20px 0;"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:14.5px;color:#3A342B;font-family:'Prata',Georgia,serif;flex-grow:1;">
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Predjelo od domaćih suhomesnatih proizvoda</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Topla supa ili čorba</li>
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Glavno jelo po izboru iz sezonskog menija</li>
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Torta po Vašem izboru</li>
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Piće iz Premium seleckije po izboru našeg somelijea</li>
+        </ul>
+      </div>
+
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;padding:34px 30px;display:flex;flex-direction:column;">
+        <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; letter-spacing: 0.08em; font-weight: 500">Roštilj u dvorištu</h3>
+        <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Ležerna proslava na otvorenom za veće grupe</p>
+        <div style="height:1px;background:rgba(38,34,28,0.10);margin:20px 0;"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:14.5px;color:#3A342B;font-family:'Prata',Georgia,serif;flex-grow:1;">
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Meso sa roštilja i ražnja</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Pečene i svеže salate</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Domaći hleb i ajvar</li><li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Domaći kolači uz kafu</li><li style="display:flex;gap:10px;"></li>
+        </ul>
+      </div>
+
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;padding:34px 30px;display:flex;flex-direction:column;">
+        <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; letter-spacing: 0.08em; font-weight: 500">Svečani ručak</h3>
+        <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Porodično okupljanje uz topao obrok, do 25 gostiju</p>
+        <div style="height:1px;background:rgba(38,34,28,0.10);margin:20px 0;"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:14.5px;color:#3A342B;font-family:'Prata',Georgia,serif;flex-grow:1;">
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Hladno predjelo sa domaćim specijalitetima</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Supa od domaće živine</li>
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Pečenje sa prilozima iz furune</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Izbor domaćih kolača</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Piće iz Premium selekcije po izboru našeg somelijea</li>
+        </ul>
+      </div>
+
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;padding:34px 30px;display:flex;flex-direction:column;">
+        <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; letter-spacing: 0.08em; font-weight: 500">Vinsko veče</h3>
+        <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Degustacija uz fruškogorska vina, do 12 gostiju</p>
+        <div style="height:1px;background:rgba(38,34,28,0.10);margin:20px 0;"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:14.5px;color:#3A342B;font-family:'Prata',Georgia,serif;flex-grow:1;">
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Daske sireva i suhomesnatih specijaliteta</li>
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Topli zalogaji uz vino</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Vođena degustacija 4 vina</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Desert uz desertno vino</li>
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Preporuka somelijea za svaki tok</li>
+        </ul>
+      </div>
+
+      <div style="background:#FFFDF8;border:1px solid rgba(38,34,28,0.12);border-radius:20px;padding:34px 30px;display:flex;flex-direction:column;">
+        <h3 style="font-family: 'Italianno',cursive; font-size: 27px; color: #26221C; letter-spacing: 0.08em; font-weight: 500">Dečja proslava</h3>
+        <p style="font-size:14px;line-height:1.6;color:#6B6459;margin-top:8px;font-family:'Prata',Georgia,serif;">Veseo meni prilagođen najmlađima</p>
+        <div style="height:1px;background:rgba(38,34,28,0.10);margin:20px 0;"></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;font-size:14.5px;color:#3A342B;font-family:'Prata',Georgia,serif;flex-grow:1;">
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Mini pljeskavice i pileći nagetsi</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Pomfrit i sezonsko povrće</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Mini pice i sendviči</li>
+          <li style="display:flex;gap:10px;"><span style="width: 6px; height: 6px; background: rgb(169, 106, 61); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0;"></span>Rođendanska torta po izboru</li>
+          <li style="display:flex;gap:10px;"><span style="width:6px;height:6px;background:#A96A3D;transform:rotate(45deg);margin-top:6px;flex-shrink:0;"></span>Prirodni sokovi i voćni koktel</li>
+        </ul>
+      </div>
+
+    </div>
+    </div>
+      <button class="vv-mslide-nav vv-ket-prev" onClick="{{ ketPrev }}" aria-label="Prethodni paket" style="position:absolute;top:50%;left:-6px;transform:translateY(-50%);width:40px;height:60px;background:none;border:none;padding:0;color:#26221C;font-size:34px;line-height:1;cursor:pointer;align-items:center;justify-content:center;z-index:5;transition:none;">‹</button>
+      <button class="vv-mslide-nav vv-ket-next" onClick="{{ ketNext }}" aria-label="Sledeci paket" style="position:absolute;top:50%;right:-6px;transform:translateY(-50%);width:40px;height:60px;background:none;border:none;padding:0;color:#26221C;font-size:34px;line-height:1;cursor:pointer;align-items:center;justify-content:center;z-index:5;transition:none;">›</button>
+    </div>
+    <p class="vv-meni-note" style="text-align:center;margin-top:40px;font-size:14px;line-height:1.6;color:#6B6459;max-width:620px;margin-left:auto;margin-right:auto;font-family:'Prata',Georgia,serif;">Ketering se dodatno naplaćuje, a cenu formiramo na upit prema meniju,<br>broju gostiju i dekoraciji.&nbsp;<br class="vv-mob-br">Javite nam povod prilikom rezervacije.</p>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="Rezervacija.dc.html#konsultacije" style="font-family:'Prata',Georgia,serif;display:inline-block;padding:16px 36px;background:#A96A3D;color:#FBF7EF;border-radius:100px;font-size:15px;font-weight:600;letter-spacing:0.02em;" style-hover="background:#33402F;color:#F4EFE6;">Zakažite konsultacije</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding:56px 6vw 40px;background:#26221C;color:#F4EFE6;">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:30px;max-width:1400px;margin:0 auto;">
+      <div>
+        <div style="font-family:'Prata',Georgia,serif;font-size:30px;font-weight:600;letter-spacing:0.04em;">VIDIK</div>
+        <p style="margin-top:10px;font-size:13px;color:rgba(244,239,230,0.6);max-width:280px;line-height:1.5;font-family:'Prata',Georgia,serif;">Boutique vikendica za luksuzan odmor na Fruškoj gori.</p>
+      </div>
+      <div style="display:flex;gap:40px;font-size:13.5px;">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="Vikendica Vidik.dc.html#sadrzaji" style="color:rgba(244,239,230,0.8);">Sadržaji</a>
+          <a href="Vikendica Vidik.dc.html#galerija" style="color:rgba(244,239,230,0.8);">Galerija</a>
+          <a href="Vikendica Vidik.dc.html#cenovnik" style="color:rgba(244,239,230,0.8);">Cenovnik</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="Vikendica Vidik.dc.html#okolina" style="color:rgba(244,239,230,0.8);">Okolina</a>
+          <a href="Vikendica Vidik.dc.html#faq" style="color:rgba(244,239,230,0.8);">Pitanja</a>
+          <a href="Vikendica Vidik.dc.html#rezervacija" style="color:rgba(244,239,230,0.8);">Rezervacija</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:40px;padding-top:22px;border-top:1px solid rgba(244,239,230,0.14);max-width:1400px;margin-left:auto;margin-right:auto;font-size:12px;color:rgba(244,239,230,0.45);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-family:'Prata',Georgia,serif;">
+      <span>© 2026 VIDIK · Fruška gora</span>
+      <span>rezervacije@vidik-fruskagora.rs · +381 60 000 0000</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    try { const _f = sessionStorage.getItem('vv-from'); if (_f) { const _b = document.querySelector('#dc-root a[data-back]'); if (_b) _b.setAttribute('href', 'Vikendica Vidik.dc.html#' + _f); } } catch (e) {}
+    const _h = (location.hash || '').replace('#', '');
+    if (_h) {
+      let _n = 0;
+      const _jump = () => {
+        const _t = document.getElementById(_h);
+        if (_t) { const _y = _t.getBoundingClientRect().top + window.pageYOffset - 8; window.scrollTo({ top: _y, behavior: 'auto' }); }
+        else if (_n++ < 20) setTimeout(_jump, 100);
+      };
+      setTimeout(_jump, 120);
+    }
+  }
+  renderVals() {
+    if (this._mi === undefined) this._mi = 0;
+    if (this._ki === undefined) this._ki = 0;
+    const go = (cls, key, dir) => {
+      const t = document.querySelector('#dc-root .' + cls);
+      if (!t) return;
+      const n = t.children.length;
+      if (!n) return;
+      this[key] = (this[key] + dir + n) % n;
+      t.style.transform = 'translateX(-' + (this[key] * 100) + '%)';
+    };
+    return {
+      menuPrev: () => go('vv-menu-track', '_mi', -1),
+      menuNext: () => go('vv-menu-track', '_mi', 1),
+      ketPrev: () => go('vv-ket-track', '_ki', -1),
+      ketNext: () => go('vv-ket-track', '_ki', 1),
+    };
+  }
+}
+</script>
+</body>
+</html>

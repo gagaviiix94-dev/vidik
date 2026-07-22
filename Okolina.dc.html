@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{ font-family:'Prata',Georgia,serif; color:#26221C; background:#F4EFE6; -webkit-font-smoothing:antialiased; }
+  a{ color:#33402F; text-decoration:none; }
+  a:hover{ color:#A96A3D; }
+  ::selection{ background:#A96A3D; color:#F4EFE6; }
+  @font-face{ font-family:'Italianno'; src:url('uploads/Italianno-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Prata',Georgia,serif; src:url('uploads/Playfair_9pt-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Prata',Georgia,serif; src:url('uploads/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype'); font-weight:400 900; font-style:italic; font-display:swap; }
+  @font-face{ font-family:'Prata'; src:url('uploads/Prata-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+
+  a[style*="border-radius:100px"],a[style*="border-radius: 100px"],button[style*="border-radius:100px"],button[style*="border-radius: 100px"]{ transition:transform .4s cubic-bezier(.16,.7,.2,1), box-shadow .4s cubic-bezier(.16,.7,.2,1), background-color .3s ease, color .3s ease, border-color .3s ease !important; will-change:transform; }
+  a[style*="border-radius:100px"]:hover,a[style*="border-radius: 100px"]:hover,button[style*="border-radius:100px"]:hover,button[style*="border-radius: 100px"]:hover{ transform:translateY(-3px) !important; box-shadow:0 14px 30px rgba(38,34,28,0.22) !important; }
+  a[style*="border-radius:100px"]:active,a[style*="border-radius: 100px"]:active,button[style*="border-radius:100px"]:active,button[style*="border-radius: 100px"]:active{ transform:translateY(-1px) !important; }
+  /* btn-anim */
+  @media (max-width:920px){ [style*="repeat(3"]{ grid-template-columns:1fr 1fr !important; } }
+  @media (max-width:600px){ [style*="repeat(3"]{ grid-template-columns:1fr !important; } }
+  /* mob-type */
+  .vv-mob-br{ display:none; }
+  @media (max-width:880px){
+    html,body{ overflow-x:clip !important; max-width:100% !important; }
+    body > div, #dc-root > div{ overflow-x:clip !important; }
+  }
+  @media (max-width:600px){
+    .vv-mob-br{ display:inline !important; }
+    body{ overflow-wrap:break-word; }
+    h1{ font-size:clamp(38px,11.5vw,64px) !important; line-height:1.08 !important; }
+    h2{ font-size:clamp(27px,8vw,44px) !important; line-height:1.12 !important; }
+    h3{ font-size:clamp(24px,7vw,32px) !important; }
+    [style*="42vw"]{ height:clamp(210px,52vw,300px) !important; }
+    [style*="240px"]{ height:180px !important; }
+  }
+  @media (max-width:600px){ #dc-root nav{ padding-right:6vw !important; } #dc-root nav > a:last-child{ display:inline-block !important; white-space:normal !important; max-width:110px; text-align:right; line-height:1.28; } }
+  .vv-ok-nav{ display:none; }
+  @media (min-width:881px){ .vv-ok-page{ display:contents; } }
+  @media (max-width:880px){
+    .vv-ok-vp{ overflow:hidden !important; }
+    .vv-ok-track{ display:flex !important; grid-template-columns:none !important; gap:0 !important; transition:transform .55s cubic-bezier(.16,.7,.2,1); will-change:transform; }
+    .vv-ok-page{ flex:0 0 100% !important; display:flex !important; flex-direction:column !important; gap:36px !important; }
+    .vv-ok-nav{ display:flex !important; }
+  }
+</style>
+
+</helmet>
+
+<div style="max-width:1600px;margin:0 auto;position:relative;background:#F4EFE6;min-height:100vh;">
+
+  <!-- NAV -->
+  <nav style="font-family:'Prata',Georgia,serif; position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;background:rgba(244,239,230,0.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(38,34,28,0.10);">
+    <a href="Vikendica Vidik.dc.html" style="font-family:'Prata',Georgia,serif;font-size:26px;font-weight:600;letter-spacing:0.04em;color:#26221C;display:flex;align-items:baseline;gap:9px;">
+      VIDIK
+      <span style="font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#A96A3D;">Fruška gora</span>
+    </a>
+    <a href="Vikendica Vidik.dc.html" data-back="" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#33402F;" style-hover="color:#A96A3D;">← Nazad na početnu</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header style="padding:clamp(60px,8vw,110px) 6vw clamp(40px,5vw,56px);text-align:center;">
+    <div style="font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#A96A3D;margin-bottom:20px;">Lokacija &amp; okolina</div>
+    <h1 style="font-family:'Italianno',cursive;font-weight:400;font-size:clamp(52px,7vw,96px);line-height:1.05;color:#26221C;max-width:900px;margin:0 auto;">Sve najlepše od Fruške gore</h1>
+    <p class="vv-ok-lead" style="margin-top:24px;font-size:17px;line-height:1.7;color:#4C463C;max-width:720px;margin-left:auto;margin-right:auto;font-family:'Prata',Georgia,serif;"><span style="text-align: start;">Vikendicu okružuju nacionalni park, vinski putevi i manastiri, a Novi Sad je udaljen svega tridesetak minuta vožnje.</span>&nbsp;Evo šta vas čeka u okolini.</p>
+  </header>
+
+  <!-- BIG IMAGE -->
+  <section style="padding:0 6vw clamp(40px,5vw,64px);">
+    <div style="position:relative;height:clamp(320px,42vw,560px);border-radius:18px;overflow:hidden;">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok-hero" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jesenja_izmaglica_na_Fru%C5%A1koj_gori.jpg?width=1600" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/File:Jesenja_izmaglica_na_Fru%C5%A1koj_gori.jpg" placeholder="Panorama Fruške gore" hint-size="100%,100%"></x-import>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section style="padding:0 6vw clamp(70px,9vw,120px);">
+    <div class="vv-ok-wrap" style="max-width:1300px;margin:0 auto;">
+    <div class="vv-ok-vp" style="overflow:visible;">
+    <div class="vv-ok-track" style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
+    <div class="vv-ok-page">
+      <div style="display:flex;flex-direction:column;">
+        <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok1" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Grgeteg_monastery_vineyard_on_Fru%C5%A1ka_Gora.jpg?width=1000" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/File:Grgeteg_monastery_vineyard_on_Fru%C5%A1ka_Gora.jpg" placeholder="Vinarije" hint-size="100%,100%"></x-import>
+        </div>
+        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Vinarije &amp;&nbsp; degustacije</h3>
+        <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Fruška gora je vinorodni kraj sa vekovnom tradicijom. Porodične vinarije u komšiluku nude obilaske podruma i degustacije domaćih sorti - od bermeta do rizlinga.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;">
+        <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok2" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Fruska gora - Novo Hopovo monastery.jpg?width=1200" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/File:Fruska_gora_-_Novo_Hopovo_monastery.jpg" placeholder="Manastiri" hint-size="100%,100%"></x-import>
+        </div>
+        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Manastiri</h3>
+        <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Više od petnaest srednjovekovnih manastira krije se među šumama Fruške gore. Krušedol, Novo Hopovo i Grgeteg su na svega nekoliko minuta vožnje od vikendice.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;">
+        <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok3" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Fru%C5%A1ka_Gora_National_Park.jpg?width=1000" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/File:Fru%C5%A1ka_Gora_National_Park.jpg" placeholder="Planinarenje i bicikl" hint-size="100%,100%"></x-import>
+        </div>
+        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Planinarenje &amp;&nbsp; bicikl</h3>
+        <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Uređene pešačke i biciklističke staze vode kroz gustu šumu do vidikovaca. Idealno za jutarnje šetnje, trčanje ili celodnevni izlet u prirodi.</p>
+      </div>
+    </div>
+    <div class="vv-ok-page">
+      <div style="display:flex;flex-direction:column;">
+        <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok4" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Споменик Светозара Милетића на тргу Слободе у Новом Саду.jpg?width=1200" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/Category:Statue_of_Svetozar_Mileti%C4%87_in_Novi_Sad" placeholder="Novi Sad" hint-size="100%,100%"></x-import>
+        </div>
+        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Do Novog Sada za 30 min</h3>
+        <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Kad poželite gradsku vrevu, Novi Sad sa Petrovaradinskom tvrđavom, kafanama i kulturnim dešavanjima udaljen je svega tridesetak minuta vožnje.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;">
+        <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok5" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ćevapi.jpg?width=1000" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/File:%C4%86evapi.jpg" placeholder="Lokalna kuhinja" hint-size="100%,100%"></x-import>
+        </div>
+        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Domaća kuhinja &amp;&nbsp; salaši</h3>
+        <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Etno salaši i restorani u okolini služe domaće specijalitete od svežih, lokalnih namirnica</p>
+      </div>
+      <div style="display:flex;flex-direction:column;">
+        <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok6" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jezero_Moharac.jpg?width=1000" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/File:Jezero_Moharac.jpg" placeholder="Jezera i izletišta" hint-size="100%,100%"></x-import>
+        </div>
+        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Jezera &amp;&nbsp; izletišta</h3>
+        <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Mirna jezera, uređeni vidikovci i izletišta savršena su za porodične izlete, piknik ili predah tokom toplih dana.</p>
+      </div>
+    </div>
+    </div>
+    </div>
+    <div class="vv-ok-nav" style="justify-content:center;gap:34px;margin-top:34px;">
+      <button class="vv-ok-prev" onClick="{{ okPrev }}" aria-label="Prethodni predlozi" style="background:none;border:none;padding:8px 12px;color:#26221C;font-size:32px;line-height:1;cursor:pointer;transition:opacity .25s ease;opacity:0.28;pointer-events:none;">‹</button>
+      <button class="vv-ok-next" onClick="{{ okNext }}" aria-label="Sledeći predlozi" style="background:none;border:none;padding:8px 12px;color:#26221C;font-size:32px;line-height:1;cursor:pointer;transition:opacity .25s ease;opacity:1;pointer-events:auto;">›</button>
+    </div>
+    </div>
+
+    <div style="text-align:center;margin-top:64px;">
+      <a href="Vikendica Vidik.dc.html#rezervacija" style="font-family:'Prata',Georgia,serif; display:inline-block;padding:16px 36px;background:#A96A3D;color:#FBF7EF;border-radius:100px;font-size:15px;font-weight:600;letter-spacing:0.02em;" style-hover="background:#33402F;color:#F4EFE6;">Rezervišite svoj boravak</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding:56px 6vw 40px;background:#26221C;color:#F4EFE6;">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:30px;max-width:1400px;margin:0 auto;">
+      <div>
+        <div style="font-family:'Prata',Georgia,serif;font-size:30px;font-weight:600;letter-spacing:0.04em;">VIDIK</div>
+        <p style="margin-top:10px;font-size:13px;color:rgba(244,239,230,0.6);max-width:280px;line-height:1.5;font-family:'Prata',Georgia,serif;">Boutique vikendica za luksuzan odmor na Fruškoj gori.</p>
+      </div>
+      <div style="display:flex;gap:40px;font-size:13.5px;">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="Vikendica Vidik.dc.html#sadrzaji" style="color:rgba(244,239,230,0.8);">Sadržaji</a>
+          <a href="Vikendica Vidik.dc.html#galerija" style="color:rgba(244,239,230,0.8);">Galerija</a>
+          <a href="Vikendica Vidik.dc.html#cenovnik" style="color:rgba(244,239,230,0.8);">Cenovnik</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="Vikendica Vidik.dc.html#okolina" style="color:rgba(244,239,230,0.8);">Okolina</a>
+          <a href="Vikendica Vidik.dc.html#faq" style="color:rgba(244,239,230,0.8);">Pitanja</a>
+          <a href="Vikendica Vidik.dc.html#rezervacija" style="color:rgba(244,239,230,0.8);">Rezervacija</a>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:40px;padding-top:22px;border-top:1px solid rgba(244,239,230,0.14);max-width:1400px;margin-left:auto;margin-right:auto;font-size:12px;color:rgba(244,239,230,0.45);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-family:'Prata',Georgia,serif;">
+      <span>© 2026 VIDIK · Fruška gora</span>
+      <span>rezervacije@vidik-fruskagora.rs · +381 60 000 0000</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    try { const _f = sessionStorage.getItem('vv-from'); if (_f) { const _b = document.querySelector('#dc-root a[data-back]'); if (_b) _b.setAttribute('href', 'Vikendica Vidik.dc.html#' + _f); } } catch (e) {}
+  }
+  renderVals() {
+    if (this._ok === undefined) this._ok = 0;
+    const apply = () => {
+      const t = document.querySelector('#dc-root .vv-ok-track');
+      if (t) t.style.transform = 'translateX(-' + (this._ok * 100) + '%)';
+      const prev = document.querySelector('#dc-root .vv-ok-prev');
+      const next = document.querySelector('#dc-root .vv-ok-next');
+      if (prev) { prev.style.opacity = this._ok === 0 ? '0.28' : '1'; prev.style.pointerEvents = this._ok === 0 ? 'none' : 'auto'; }
+      if (next) { next.style.opacity = this._ok === 1 ? '0.28' : '1'; next.style.pointerEvents = this._ok === 1 ? 'none' : 'auto'; }
+    };
+    return {
+      okPrev: () => { if (this._ok === 0) return; this._ok = 0; apply(); },
+      okNext: () => { if (this._ok === 1) return; this._ok = 1; apply(); },
+    };
+  }
+}
+</script>
+</body>
+</html>
