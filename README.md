@@ -25,7 +25,6 @@ python3 -m http.server 8000
 - `Utisci.dc.html` — Utisci gostiju
 - `Mobilni pregled.html` — Pregled svih strana u telefonskim okvirima (390px)
 - `support.js`, `image-slot.js`, `doc-page.js` — runtime i komponente
-- `uploads/` — slike i fontovi
 
 ## Napomena
 Sajt je responzivan; mobilni layout se aktivira na širinama ≤880px.
