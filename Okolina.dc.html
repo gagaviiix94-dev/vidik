@@ -20,6 +20,7 @@
   ::selection{ background:#A96A3D; color:#F4EFE6; }
   @font-face{ font-family:'Italianno'; src:url('Italianno-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
   @font-face{ font-family:'Prata'; src:url('Prata-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+  @font-face{ font-family:'Montserrat'; src:url('Montserrat.ttf') format('truetype'); font-weight:300 800; font-display:swap; }
 
   a[style*="border-radius:100px"],a[style*="border-radius: 100px"],button[style*="border-radius:100px"],button[style*="border-radius: 100px"]{ transition:transform .4s cubic-bezier(.16,.7,.2,1), box-shadow .4s cubic-bezier(.16,.7,.2,1), background-color .3s ease, color .3s ease, border-color .3s ease !important; will-change:transform; }
   a[style*="border-radius:100px"]:hover,a[style*="border-radius: 100px"]:hover,button[style*="border-radius:100px"]:hover,button[style*="border-radius: 100px"]:hover{ transform:translateY(-3px) !important; box-shadow:0 14px 30px rgba(38,34,28,0.22) !important; }
@@ -68,8 +69,8 @@
 
   <!-- HEADER -->
   <header style="padding:clamp(60px,8vw,110px) 6vw clamp(40px,5vw,56px);text-align:center;">
-    <div style="font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#A96A3D;margin-bottom:20px;">Lokacija &amp; okolina</div>
-    <h1 style="font-family:'Italianno',cursive;font-weight:400;font-size:clamp(52px,7vw,96px);line-height:1.05;color:#26221C;max-width:900px;margin:0 auto;">Sve najlepše od Fruške gore</h1>
+    <div style="font-size:12px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#A96A3D;margin-bottom:20px;">Lokacija i okolina</div>
+    <h1 style="font-family:'Montserrat',sans-serif;font-weight:400;font-size:clamp(42px,5.5vw,74px);line-height:1.05;color:#26221C;max-width:900px;margin:0 auto;">Sve najlepše od Fruške gore</h1>
     <p class="vv-ok-lead" style="margin-top:24px;font-size:17px;line-height:1.7;color:#4C463C;max-width:720px;margin-left:auto;margin-right:auto;font-family:'Prata',Georgia,serif;"><span style="text-align: start;">Vikendicu okružuju nacionalni park, vinski putevi i manastiri, a Novi Sad je udaljen svega tridesetak minuta vožnje.</span>&nbsp;Evo šta vas čeka u okolini.</p>
   </header>
 
@@ -90,21 +91,21 @@
         <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
           <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok1" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Grgeteg_monastery_vineyard_on_Fru%C5%A1ka_Gora.jpg?width=1000" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/File:Grgeteg_monastery_vineyard_on_Fru%C5%A1ka_Gora.jpg" placeholder="Vinarije" hint-size="100%,100%"></x-import>
         </div>
-        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Vinarije &amp;&nbsp; degustacije</h3>
+        <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Vinarije i degustacije</h3>
         <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Fruška gora je vinorodni kraj sa vekovnom tradicijom. Porodične vinarije u komšiluku nude obilaske podruma i degustacije domaćih sorti - od bermeta do rizlinga.</p>
       </div>
       <div style="display:flex;flex-direction:column;">
         <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
           <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok2" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Fruska gora - Novo Hopovo monastery.jpg?width=1200" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/File:Fruska_gora_-_Novo_Hopovo_monastery.jpg" placeholder="Manastiri" hint-size="100%,100%"></x-import>
         </div>
-        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Manastiri</h3>
+        <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Manastiri</h3>
         <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Više od petnaest srednjovekovnih manastira krije se među šumama Fruške gore. Krušedol, Novo Hopovo i Grgeteg su na svega nekoliko minuta vožnje od vikendice.</p>
       </div>
       <div style="display:flex;flex-direction:column;">
         <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
           <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok3" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Fru%C5%A1ka_Gora_National_Park.jpg?width=1000" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/File:Fru%C5%A1ka_Gora_National_Park.jpg" placeholder="Planinarenje i bicikl" hint-size="100%,100%"></x-import>
         </div>
-        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Planinarenje &amp;&nbsp; bicikl</h3>
+        <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Planinarenje i bicikl</h3>
         <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Uređene pešačke i biciklističke staze vode kroz gustu šumu do vidikovaca. Idealno za jutarnje šetnje, trčanje ili celodnevni izlet u prirodi.</p>
       </div>
     </div>
@@ -113,21 +114,21 @@
         <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
           <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok4" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Споменик Светозара Милетића на тргу Слободе у Новом Саду.jpg?width=1200" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/Category:Statue_of_Svetozar_Mileti%C4%87_in_Novi_Sad" placeholder="Novi Sad" hint-size="100%,100%"></x-import>
         </div>
-        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Do Novog Sada za 30 min</h3>
+        <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Do Novog Sada za 30 min</h3>
         <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Kad poželite gradsku vrevu, Novi Sad sa Petrovaradinskom tvrđavom, kafanama i kulturnim dešavanjima udaljen je svega tridesetak minuta vožnje.</p>
       </div>
       <div style="display:flex;flex-direction:column;">
         <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
           <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok5" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Ćevapi.jpg?width=1000" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/File:%C4%86evapi.jpg" placeholder="Lokalna kuhinja" hint-size="100%,100%"></x-import>
         </div>
-        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Domaća kuhinja &amp;&nbsp; salaši</h3>
+        <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Domaća kuhinja i salaši</h3>
         <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Etno salaši i restorani u okolini služe domaće specijalitete od svežih, lokalnih namirnica</p>
       </div>
       <div style="display:flex;flex-direction:column;">
         <div style="position:relative;height:240px;border-radius:16px;overflow:hidden;margin-bottom:22px;">
           <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="ok6" shape="rect" fit="cover" src="https://commons.wikimedia.org/wiki/Special:FilePath/Jezero_Moharac.jpg?width=1000" credit="Wikimedia Commons (CC)" credit-href="https://commons.wikimedia.org/wiki/File:Jezero_Moharac.jpg" placeholder="Jezera i izletišta" hint-size="100%,100%"></x-import>
         </div>
-        <h3 style="font-family:'Italianno',cursive;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Jezera &amp;&nbsp; izletišta</h3>
+        <h3 style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:38px;color:#26221C;margin-bottom:10px;">Jezera i izletišta</h3>
         <p style="font-size:15px;line-height:1.65;color:#4C463C;font-family:'Prata',Georgia,serif;">Mirna jezera, uređeni vidikovci i izletišta savršena su za porodične izlete, piknik ili predah tokom toplih dana.</p>
       </div>
     </div>
@@ -148,7 +149,7 @@
   <footer style="padding:56px 6vw 40px;background:#26221C;color:#F4EFE6;">
     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:30px;max-width:1400px;margin:0 auto;">
       <div>
-        <div style="font-family:'Prata',Georgia,serif;font-size:30px;font-weight:600;letter-spacing:0.04em;">VIDIK</div>
+        <a href="Vikendica Vidik.dc.html" style="font-family:'Prata',Georgia,serif;font-size:26px;font-weight:600;letter-spacing:0.04em;color:inherit;text-decoration:none;display:inline-flex;align-items:baseline;gap:9px;cursor:pointer;">VIDIK<span style="font-family:'Prata',Georgia,serif;font-size:10px;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:#C7B78F;">Fruška gora</span></a>
         <p style="margin-top:10px;font-size:13px;color:rgba(244,239,230,0.6);max-width:280px;line-height:1.5;font-family:'Prata',Georgia,serif;">Boutique vikendica za luksuzan odmor na Fruškoj gori.</p>
       </div>
       <div style="display:flex;gap:40px;font-size:13.5px;">
